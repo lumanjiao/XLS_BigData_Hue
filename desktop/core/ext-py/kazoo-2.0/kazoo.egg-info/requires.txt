@@ -1,0 +1,6 @@
+
+[test]
+coverage
+mock
+nose
+gevent

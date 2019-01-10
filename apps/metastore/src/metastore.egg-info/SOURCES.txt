@@ -1,0 +1,15 @@
+setup.py
+src/metastore/__init__.py
+src/metastore/conf.py
+src/metastore/forms.py
+src/metastore/models.py
+src/metastore/settings.py
+src/metastore/tests.py
+src/metastore/urls.py
+src/metastore/views.py
+src/metastore.egg-info/PKG-INFO
+src/metastore.egg-info/SOURCES.txt
+src/metastore.egg-info/dependency_links.txt
+src/metastore.egg-info/entry_points.txt
+src/metastore.egg-info/requires.txt
+src/metastore.egg-info/top_level.txt

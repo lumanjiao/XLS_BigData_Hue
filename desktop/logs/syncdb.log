@@ -1,0 +1,5 @@
+[13/Dec/2018 14:44:17 ] settings     INFO     Welcome to Hue 3.9.0
+[13/Dec/2018 14:44:17 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[13/Dec/2018 14:44:17 ] appmanager   DEBUG    Loaded Desktop Applications: indexer
+[13/Dec/2018 14:44:17 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer)
+[13/Dec/2018 14:44:17 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db

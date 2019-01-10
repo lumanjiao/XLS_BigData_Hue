@@ -1,0 +1,2 @@
+pysaml2==2.2.0
+python-memcached==1.48

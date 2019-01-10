@@ -1,0 +1,16 @@
+setup.py
+parquet/__init__.py
+parquet/__main__.py
+parquet/bitstring.py
+parquet/constants.py
+parquet/encoding.py
+parquet/schema.py
+parquet/ttypes.py
+parquet.egg-info/PKG-INFO
+parquet.egg-info/SOURCES.txt
+parquet.egg-info/dependency_links.txt
+parquet.egg-info/entry_points.txt
+parquet.egg-info/requires.txt
+parquet.egg-info/top_level.txt
+test/test_encoding.py
+test/test_read_support.py

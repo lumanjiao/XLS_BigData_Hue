@@ -1,0 +1,4 @@
+#!/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/python2.7
+# EASY-INSTALL-SCRIPT: 'Markdown==2.0.3','markdown'
+__requires__ = 'Markdown==2.0.3'
+__import__('pkg_resources').run_script('Markdown==2.0.3', 'markdown')

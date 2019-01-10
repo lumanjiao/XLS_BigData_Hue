@@ -1,0 +1,43 @@
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing oozie
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 262, in sync
+    from oozie.models import Workflow, Coordinator, Bundle
+ImportError: No module named oozie.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing beeswax
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 285, in sync
+    from beeswax.models import SavedQuery
+ImportError: No module named beeswax.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing pig
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 296, in sync
+    from pig.models import PigScript
+ImportError: No module named pig.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing search
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 305, in sync
+    from search.models import Collection
+ImportError: No module named search.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing Document2
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 326, in sync
+    for job in find_jobs_with_no_doc(Document2):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 96, in __iter__
+    self._fetch_all()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: desktop_document2

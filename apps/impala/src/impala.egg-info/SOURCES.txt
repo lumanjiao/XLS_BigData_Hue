@@ -1,0 +1,16 @@
+setup.py
+src/impala/__init__.py
+src/impala/conf.py
+src/impala/dashboards.py
+src/impala/forms.py
+src/impala/models.py
+src/impala/settings.py
+src/impala/tests.py
+src/impala/urls.py
+src/impala/views.py
+src/impala.egg-info/PKG-INFO
+src/impala.egg-info/SOURCES.txt
+src/impala.egg-info/dependency_links.txt
+src/impala.egg-info/entry_points.txt
+src/impala.egg-info/requires.txt
+src/impala.egg-info/top_level.txt

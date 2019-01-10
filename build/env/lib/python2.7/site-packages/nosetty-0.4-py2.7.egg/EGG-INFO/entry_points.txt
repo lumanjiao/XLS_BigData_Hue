@@ -1,0 +1,3 @@
+[nose.plugins]
+tty = nosetty:NoseTTY
+

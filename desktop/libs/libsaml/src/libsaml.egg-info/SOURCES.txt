@@ -1,0 +1,14 @@
+setup.py
+src/libsaml/__init__.py
+src/libsaml/backend.py
+src/libsaml/conf.py
+src/libsaml/metrics.py
+src/libsaml/saml_settings.py
+src/libsaml/urls.py
+src/libsaml/views.py
+src/libsaml.egg-info/PKG-INFO
+src/libsaml.egg-info/SOURCES.txt
+src/libsaml.egg-info/dependency_links.txt
+src/libsaml.egg-info/entry_points.txt
+src/libsaml.egg-info/requires.txt
+src/libsaml.egg-info/top_level.txt

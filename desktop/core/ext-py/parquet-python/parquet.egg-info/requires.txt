@@ -1,0 +1,4 @@
+thrift
+
+[snappy support]
+python-snappy

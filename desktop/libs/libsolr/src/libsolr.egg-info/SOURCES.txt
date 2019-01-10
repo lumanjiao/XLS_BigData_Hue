@@ -1,0 +1,12 @@
+setup.py
+src/libsolr/__init__.py
+src/libsolr/api.py
+src/libsolr/conf.py
+src/libsolr/models.py
+src/libsolr/tests.py
+src/libsolr.egg-info/PKG-INFO
+src/libsolr.egg-info/SOURCES.txt
+src/libsolr.egg-info/dependency_links.txt
+src/libsolr.egg-info/entry_points.txt
+src/libsolr.egg-info/requires.txt
+src/libsolr.egg-info/top_level.txt

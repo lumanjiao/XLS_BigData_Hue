@@ -1,0 +1,10 @@
+#!/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/python2.7
+# EASY-INSTALL-ENTRY-SCRIPT: 'desktop==3.9.0','console_scripts','hue'
+__requires__ = 'desktop==3.9.0'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('desktop==3.9.0', 'console_scripts', 'hue')()
+    )

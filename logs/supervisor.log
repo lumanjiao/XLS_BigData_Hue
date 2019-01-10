@@ -1,0 +1,909 @@
+[13/Dec/2018 16:21:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 16:21:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 16:21:46 ] supervisor   INFO     Started proceses (pid 54174) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 16:21:46 ] supervisor   INFO     Started proceses (pid 54176) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 16:21:51 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:31:59 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:31:59 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:31:59 ] supervisor   INFO     Started proceses (pid 12999) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:32:00 ] supervisor   INFO     Started proceses (pid 13000) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:32:04 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:33:42 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:33:42 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:33:42 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:33:42 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 17:33:42 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 17:39:09 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:39:10 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:39:10 ] supervisor   INFO     Started proceses (pid 13772) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:39:10 ] supervisor   INFO     Started proceses (pid 13773) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:39:13 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:42:08 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:42:09 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:42:09 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:42:16 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:42:17 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:42:17 ] supervisor   INFO     Started proceses (pid 14182) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:42:17 ] supervisor   INFO     Started proceses (pid 14184) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:42:19 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:43:39 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:43:39 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:43:39 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:43:39 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 17:43:39 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 17:43:42 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:43:42 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:43:42 ] supervisor   INFO     Started proceses (pid 14354) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:43:42 ] supervisor   INFO     Started proceses (pid 14356) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:43:44 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:45:28 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:45:28 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:45:28 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:45:28 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 17:45:28 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 17:45:32 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:45:32 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:45:32 ] supervisor   INFO     Started proceses (pid 14557) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:45:32 ] supervisor   INFO     Started proceses (pid 14559) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:45:34 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:46:32 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:46:32 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:46:32 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:46:32 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 17:46:32 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 17:46:34 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:46:34 ] supervisor   INFO     Started proceses (pid 14706) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 17:46:34 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:46:34 ] supervisor   INFO     Started proceses (pid 14708) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 17:46:37 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 17:52:14 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 17:52:14 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 17:52:14 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 17:52:15 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[13/Dec/2018 18:32:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:32:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:32:30 ] supervisor   INFO     Started proceses (pid 15619) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:32:30 ] supervisor   INFO     Started proceses (pid 15618) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:32:39 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 18:36:59 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 18:36:59 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 18:36:59 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 18:36:59 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 18:36:59 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 18:37:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:37:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:37:27 ] supervisor   INFO     Started proceses (pid 16009) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:37:27 ] supervisor   INFO     Started proceses (pid 16011) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:37:30 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 18:47:03 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 18:47:03 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 18:47:03 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 18:47:03 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[13/Dec/2018 18:47:03 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[13/Dec/2018 18:47:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:47:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:47:07 ] supervisor   INFO     Started proceses (pid 16717) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:47:07 ] supervisor   INFO     Started proceses (pid 16719) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:47:09 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 18:56:53 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 18:56:53 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 18:56:53 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 18:56:58 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:56:58 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:56:58 ] supervisor   INFO     Started proceses (pid 18877) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 18:56:58 ] supervisor   INFO     Started proceses (pid 18879) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 18:57:01 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 19:14:33 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 19:14:34 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 19:14:34 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 19:14:40 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:14:40 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:14:40 ] supervisor   INFO     Started proceses (pid 20236) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:14:40 ] supervisor   INFO     Started proceses (pid 20234) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:14:42 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 19:18:06 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 19:18:06 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 19:18:06 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 19:19:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:19:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:19:51 ] supervisor   INFO     Started proceses (pid 20916) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:19:51 ] supervisor   INFO     Started proceses (pid 20917) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:19:55 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 19:35:52 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 19:35:52 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 19:35:52 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 19:36:02 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:36:02 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:36:02 ] supervisor   INFO     Started proceses (pid 22254) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:36:02 ] supervisor   INFO     Started proceses (pid 22255) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:36:05 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 19:38:47 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 19:38:47 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 19:38:47 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 19:38:54 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:38:54 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:38:54 ] supervisor   INFO     Started proceses (pid 22553) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[13/Dec/2018 19:38:54 ] supervisor   INFO     Started proceses (pid 22555) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[13/Dec/2018 19:38:58 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[13/Dec/2018 19:44:13 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[13/Dec/2018 19:44:13 ] supervisor   WARNING  Supervisor shutting down!
+[13/Dec/2018 19:44:13 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[13/Dec/2018 19:44:13 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[14/Dec/2018 11:25:25 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:25 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:25:25 ] supervisor   INFO     Started proceses (pid 27942) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:25:25 ] supervisor   INFO     Started proceses (pid 27941) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:25:27 ] supervisor   INFO     Started proceses (pid 27955) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:27 ] supervisor   INFO     Started proceses (pid 27956) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:25:30 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[14/Dec/2018 11:25:30 ] supervisor   WARNING  Supervisor shutting down!
+[14/Dec/2018 11:25:30 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[14/Dec/2018 11:25:30 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer: 1
+[14/Dec/2018 11:25:30 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer because supervisor exiting
+[14/Dec/2018 11:25:30 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:25:30 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[14/Dec/2018 11:25:33 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[14/Dec/2018 11:25:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:52 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:25:52 ] supervisor   INFO     Started proceses (pid 28080) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:25:52 ] supervisor   INFO     Started proceses (pid 28081) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:09 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[14/Dec/2018 11:26:35 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:26:35 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[14/Dec/2018 11:26:35 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:35 ] supervisor   INFO     Started proceses (pid 28149) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:46 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:26:46 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[14/Dec/2018 11:26:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:46 ] supervisor   INFO     Started proceses (pid 28190) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:52 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:26:52 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[14/Dec/2018 11:26:52 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:26:52 ] supervisor   INFO     Started proceses (pid 28224) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:27:02 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:27:02 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver has restarted more than 3 times in the last 26 seconds
+[14/Dec/2018 11:27:03 ] supervisor   WARNING  Supervisor shutting down!
+[14/Dec/2018 11:27:03 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[14/Dec/2018 11:27:03 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 403, in wait_loop
+    shutdown(sups)        # shutdown() exits the process
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 215, in shutdown
+    sys.exit(1)
+SystemExit: 1
+[14/Dec/2018 11:27:03 ] supervisor   WARNING  Supervisor shutting down!
+[14/Dec/2018 11:27:03 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[14/Dec/2018 11:31:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:31:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:31:30 ] supervisor   INFO     Started proceses (pid 28638) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:31:30 ] supervisor   INFO     Started proceses (pid 28639) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:31:35 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[14/Dec/2018 11:31:38 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:31:38 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[14/Dec/2018 11:31:38 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:31:38 ] supervisor   INFO     Started proceses (pid 28674) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:31:43 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[14/Dec/2018 11:31:43 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[14/Dec/2018 11:31:43 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:31:43 ] supervisor   INFO     Started proceses (pid 28706) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:32:56 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:32:56 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:32:56 ] supervisor   INFO     Started proceses (pid 28858) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 11:32:56 ] supervisor   INFO     Started proceses (pid 28859) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 11:33:03 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[14/Dec/2018 11:34:44 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[14/Dec/2018 11:34:44 ] supervisor   WARNING  Supervisor shutting down!
+[14/Dec/2018 11:34:44 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[14/Dec/2018 11:34:44 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[14/Dec/2018 11:34:44 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[14/Dec/2018 15:23:59 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 15:23:59 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 15:23:59 ] supervisor   INFO     Started proceses (pid 52899) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 15:23:59 ] supervisor   INFO     Started proceses (pid 52898) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 15:24:01 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[14/Dec/2018 16:40:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 16:40:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 16:40:46 ] supervisor   INFO     Started proceses (pid 56583) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[14/Dec/2018 16:40:46 ] supervisor   INFO     Started proceses (pid 56584) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[14/Dec/2018 16:40:48 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Started proceses (pid 19465) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Started proceses (pid 19466) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Started proceses (pid 19467) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:56:51 ] supervisor   INFO     Started proceses (pid 19468) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:56:57 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[18/Dec/2018 12:56:57 ] supervisor   WARNING  Supervisor shutting down!
+[18/Dec/2018 12:56:57 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[18/Dec/2018 12:56:58 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[18/Dec/2018 12:56:58 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[18/Dec/2018 12:56:58 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer: 1
+[18/Dec/2018 12:56:58 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer because supervisor exiting
+[18/Dec/2018 12:56:58 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[18/Dec/2018 12:57:01 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[18/Dec/2018 12:57:02 ] supervisor   WARNING  Supervisor shutting down!
+[18/Dec/2018 12:57:02 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[18/Dec/2018 12:57:02 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[18/Dec/2018 12:57:02 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[18/Dec/2018 12:57:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:57:07 ] supervisor   INFO     Started proceses (pid 19530) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 12:57:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:57:07 ] supervisor   INFO     Started proceses (pid 19532) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 12:57:11 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[18/Dec/2018 13:01:21 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[18/Dec/2018 13:01:21 ] supervisor   WARNING  Supervisor shutting down!
+[18/Dec/2018 13:01:21 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[18/Dec/2018 13:01:21 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[18/Dec/2018 13:01:21 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[18/Dec/2018 13:02:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 13:02:51 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 13:02:51 ] supervisor   INFO     Started proceses (pid 20262) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[18/Dec/2018 13:02:51 ] supervisor   INFO     Started proceses (pid 20264) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[18/Dec/2018 13:02:53 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[18/Dec/2018 13:05:01 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[18/Dec/2018 13:05:01 ] supervisor   WARNING  Supervisor shutting down!
+[18/Dec/2018 13:05:01 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[18/Dec/2018 13:05:02 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[25/Dec/2018 18:18:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[25/Dec/2018 18:18:07 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[25/Dec/2018 18:18:07 ] supervisor   INFO     Started proceses (pid 88777) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[25/Dec/2018 18:18:07 ] supervisor   INFO     Started proceses (pid 88776) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[25/Dec/2018 18:18:10 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 16:57:37 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:57:37 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:57:37 ] supervisor   INFO     Started proceses (pid 94745) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:57:37 ] supervisor   INFO     Started proceses (pid 94744) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:57:40 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 16:57:42 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 16:57:42 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 16:57:42 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:57:42 ] supervisor   INFO     Started proceses (pid 94820) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:57:45 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 16:57:45 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 16:57:45 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 16:57:45 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 16:57:45 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 16:58:04 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:58:04 ] supervisor   INFO     Started proceses (pid 95189) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:58:04 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:58:04 ] supervisor   INFO     Started proceses (pid 95191) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:58:06 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 16:58:09 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 16:58:09 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 16:58:09 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:58:09 ] supervisor   INFO     Started proceses (pid 95267) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:58:12 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 16:58:12 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 16:58:12 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 16:58:12 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 16:58:12 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 16:59:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:59:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:59:27 ] supervisor   INFO     Started proceses (pid 96380) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 16:59:27 ] supervisor   INFO     Started proceses (pid 96383) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 16:59:31 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:02:02 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:02:02 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:02:02 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:02:02 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:02:02 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:02:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:02:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:02:06 ] supervisor   INFO     Started proceses (pid 98446) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:02:06 ] supervisor   INFO     Started proceses (pid 98448) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:02:11 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:03:54 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:03:54 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:03:54 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:03:58 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 17:04:02 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:04:02 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:04:02 ] supervisor   INFO     Started proceses (pid 99988) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:04:02 ] supervisor   INFO     Started proceses (pid 99990) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:04:05 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:05:38 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:05:38 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:05:38 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:05:38 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:05:38 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:05:41 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:05:41 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:05:41 ] supervisor   INFO     Started proceses (pid 101685) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:05:41 ] supervisor   INFO     Started proceses (pid 101687) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:05:44 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:07:40 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:07:40 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:07:40 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:07:40 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:07:40 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:07:43 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:07:43 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:07:43 ] supervisor   INFO     Started proceses (pid 103562) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:07:43 ] supervisor   INFO     Started proceses (pid 103564) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:07:46 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:09:24 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:09:24 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:09:24 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:09:24 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 17:09:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:09:27 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:09:27 ] supervisor   INFO     Started proceses (pid 105423) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:09:27 ] supervisor   INFO     Started proceses (pid 105425) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:09:30 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:10:15 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:10:16 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:10:16 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:10:16 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:10:16 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:10:18 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:10:18 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:10:18 ] supervisor   INFO     Started proceses (pid 106229) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:10:18 ] supervisor   INFO     Started proceses (pid 106231) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:10:22 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:11:27 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:11:27 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:11:27 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:11:27 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 17:11:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:11:30 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:11:30 ] supervisor   INFO     Started proceses (pid 107296) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:11:30 ] supervisor   INFO     Started proceses (pid 107298) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:11:33 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:14:43 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:14:43 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:14:43 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:14:43 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:14:43 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:14:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:14:46 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:14:46 ] supervisor   INFO     Started proceses (pid 110844) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:14:46 ] supervisor   INFO     Started proceses (pid 110847) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:14:50 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:15:37 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:15:37 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:15:37 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:15:37 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:15:37 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:15:39 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:15:39 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:15:39 ] supervisor   INFO     Started proceses (pid 111677) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:15:39 ] supervisor   INFO     Started proceses (pid 111680) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:15:44 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:17:02 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:17:02 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:17:02 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:17:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:17:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:17:06 ] supervisor   INFO     Started proceses (pid 112972) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:17:06 ] supervisor   INFO     Started proceses (pid 112974) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:17:11 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:21:36 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:21:36 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:21:36 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:21:36 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:21:36 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:21:38 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:21:38 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:21:38 ] supervisor   INFO     Started proceses (pid 117693) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:21:38 ] supervisor   INFO     Started proceses (pid 117695) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:21:41 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:23:37 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:23:37 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:23:37 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:23:37 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 17:23:40 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:23:40 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:23:40 ] supervisor   INFO     Started proceses (pid 119631) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:23:40 ] supervisor   INFO     Started proceses (pid 119633) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:23:44 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:24:59 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:24:59 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:24:59 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:24:59 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:24:59 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:25:01 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:25:01 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:25:02 ] supervisor   INFO     Started proceses (pid 121035) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:25:02 ] supervisor   INFO     Started proceses (pid 121037) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:25:04 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 17:26:12 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 17:26:12 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 17:26:12 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 17:26:12 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 17:26:12 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 17:26:14 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:26:14 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:26:14 ] supervisor   INFO     Started proceses (pid 122324) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 17:26:14 ] supervisor   INFO     Started proceses (pid 122328) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 17:26:17 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:03:42 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 18:03:42 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:03:42 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:03:42 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 18:03:42 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 18:03:45 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:03:45 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:03:45 ] supervisor   INFO     Started proceses (pid 407) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:03:45 ] supervisor   INFO     Started proceses (pid 410) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:03:48 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:04:26 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 18:04:26 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:04:26 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:04:26 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 18:04:26 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 18:04:28 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:04:28 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:04:28 ] supervisor   INFO     Started proceses (pid 1082) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:04:29 ] supervisor   INFO     Started proceses (pid 1084) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:04:32 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:08:37 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 18:08:37 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:08:37 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:08:37 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 18:08:37 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[27/Dec/2018 18:08:39 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:08:39 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:08:39 ] supervisor   INFO     Started proceses (pid 5993) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:08:39 ] supervisor   INFO     Started proceses (pid 5995) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:08:42 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:15:24 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 18:15:24 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:15:24 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:15:24 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 18:15:28 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:15:28 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:15:28 ] supervisor   INFO     Started proceses (pid 13375) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:15:28 ] supervisor   INFO     Started proceses (pid 13377) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:15:32 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:35:47 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:35:47 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:35:47 ] supervisor   INFO     Started proceses (pid 24130) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:35:47 ] supervisor   INFO     Started proceses (pid 24129) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:35:53 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:36:02 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:02 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:02 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:02 ] supervisor   INFO     Started proceses (pid 24216) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:36:06 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:06 ] supervisor   INFO     Started proceses (pid 24259) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:36:06 ] supervisor   INFO     Started proceses (pid 24260) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:12 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:36:14 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:14 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:14 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:14 ] supervisor   INFO     Started proceses (pid 24325) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:17 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:17 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:17 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:17 ] supervisor   INFO     Started proceses (pid 24351) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:20 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:20 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:20 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:20 ] supervisor   INFO     Started proceses (pid 24398) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:23 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:23 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:23 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:23 ] supervisor   INFO     Started proceses (pid 24429) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:25 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:25 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver has restarted more than 3 times in the last 23 seconds
+[27/Dec/2018 18:36:26 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:36:26 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:36:26 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 403, in wait_loop
+    shutdown(sups)        # shutdown() exits the process
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 215, in shutdown
+    sys.exit(1)
+SystemExit: 1
+[27/Dec/2018 18:36:26 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:36:26 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:36:26 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:26 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver exited abnormally. Restarting it.
+[27/Dec/2018 18:36:26 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:26 ] supervisor   INFO     Started proceses (pid 24485) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:36:30 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: 1
+[27/Dec/2018 18:36:30 ] supervisor   ERROR    Process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver has restarted more than 3 times in the last 12 seconds
+[27/Dec/2018 18:36:30 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:36:30 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:36:30 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 403, in wait_loop
+    shutdown(sups)        # shutdown() exits the process
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 215, in shutdown
+    sys.exit(1)
+SystemExit: 1
+[27/Dec/2018 18:36:31 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:36:31 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:37:20 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[27/Dec/2018 18:37:20 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:37:20 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:37:20 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[27/Dec/2018 18:37:41 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:37:41 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:37:41 ] supervisor   INFO     Started proceses (pid 25991) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[27/Dec/2018 18:37:41 ] supervisor   INFO     Started proceses (pid 25993) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[27/Dec/2018 18:37:43 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[27/Dec/2018 18:37:48 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 398, in wait_loop
+    sup.join(0.1)
+  File "/usr/lib64/python2.7/threading.py", line 962, in join
+    self.__block.wait(delay, balancing)
+  File "/usr/lib64/python2.7/threading.py", line 362, in wait
+    _sleep(delay)
+KeyboardInterrupt
+[27/Dec/2018 18:37:48 ] supervisor   WARNING  Supervisor shutting down!
+[27/Dec/2018 18:37:48 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[27/Dec/2018 18:37:48 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[27/Dec/2018 18:37:48 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[02/Jan/2019 16:13:31 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[02/Jan/2019 16:13:31 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[02/Jan/2019 16:13:31 ] supervisor   INFO     Started proceses (pid 10127) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[02/Jan/2019 16:13:31 ] supervisor   INFO     Started proceses (pid 10128) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[02/Jan/2019 16:13:35 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[02/Jan/2019 16:13:39 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[02/Jan/2019 16:13:39 ] supervisor   WARNING  Supervisor shutting down!
+[02/Jan/2019 16:13:39 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[02/Jan/2019 16:13:39 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[02/Jan/2019 16:13:39 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[09/Jan/2019 14:53:23 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 14:53:23 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 14:53:23 ] supervisor   INFO     Started proceses (pid 43204) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 14:53:23 ] supervisor   INFO     Started proceses (pid 43203) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 14:53:26 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 16:08:32 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 16:08:32 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 16:08:32 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 16:08:45 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:08:45 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:08:45 ] supervisor   INFO     Started proceses (pid 14622) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:08:45 ] supervisor   INFO     Started proceses (pid 14624) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:08:50 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 16:45:57 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 16:45:57 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 16:45:57 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 16:45:57 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[09/Jan/2019 16:45:57 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[09/Jan/2019 16:46:00 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:46:00 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:46:00 ] supervisor   INFO     Started proceses (pid 64207) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:46:00 ] supervisor   INFO     Started proceses (pid 64209) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:46:03 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 16:47:34 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 16:47:34 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 16:47:34 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 16:47:34 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[09/Jan/2019 16:47:37 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:47:37 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:47:37 ] supervisor   INFO     Started proceses (pid 66413) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:47:37 ] supervisor   INFO     Started proceses (pid 66415) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:47:40 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 16:56:08 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 16:56:08 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 16:56:08 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 16:56:08 ] supervisor   WARNING  Exit code for /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver: -2
+[09/Jan/2019 16:56:08 ] supervisor   INFO     Stopping /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver because supervisor exiting
+[09/Jan/2019 16:57:34 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:57:34 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:57:34 ] supervisor   INFO     Started proceses (pid 79756) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 16:57:34 ] supervisor   INFO     Started proceses (pid 79758) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 16:57:36 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 17:01:36 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 17:01:36 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 17:01:36 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 17:01:36 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[09/Jan/2019 17:01:38 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 17:01:38 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 17:01:38 ] supervisor   INFO     Started proceses (pid 85250) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 17:01:38 ] supervisor   INFO     Started proceses (pid 85253) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 17:01:42 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.
+[09/Jan/2019 17:02:45 ] supervisor   ERROR    Exception in supervisor main loop
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 386, in main
+    wait_loop(sups, options)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/supervisor.py", line 396, in wait_loop
+    time.sleep(1)
+KeyboardInterrupt
+[09/Jan/2019 17:02:45 ] supervisor   WARNING  Supervisor shutting down!
+[09/Jan/2019 17:02:45 ] supervisor   WARNING  Waiting for children to exit for 5 seconds...
+[09/Jan/2019 17:02:45 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver" exited normally.
+[09/Jan/2019 17:02:48 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 17:02:48 ] supervisor   INFO     Starting process /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 17:02:48 ] supervisor   INFO     Started proceses (pid 86830) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer
+[09/Jan/2019 17:02:48 ] supervisor   INFO     Started proceses (pid 86832) /home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue runcpserver
+[09/Jan/2019 17:02:51 ] supervisor   INFO     Command "/home/XLS_PlatForm/hue-release-3.9.0/build/env/bin/hue kt_renewer" exited normally.

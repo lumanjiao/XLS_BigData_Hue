@@ -1,0 +1,163 @@
+[
+  {
+    "path": "/home/XLS_PlatForm/hue-release-3.9.0/SparkState", 
+    "author": "lumanjiao", 
+    "version": "0.1", 
+    "name": "SparkState", 
+    "desc": "Spark State"
+  }, 
+  {
+    "path": "/home/XLS_PlatForm/hue-release-3.9.0/DataExport", 
+    "author": "TODO", 
+    "version": "0.1", 
+    "name": "DataExport", 
+    "desc": "TODO"
+  }, 
+  {
+    "path": "help", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "help", 
+    "desc": "Hue Help"
+  }, 
+  {
+    "path": "zookeeper", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "zookeeper", 
+    "desc": "ZooKeeper Browser"
+  }, 
+  {
+    "path": "pig", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "pig", 
+    "desc": "Demos on how to collect, process and anlyse Big Data"
+  }, 
+  {
+    "path": "hbase", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "hbase", 
+    "desc": "Explore and edit HBase clusters, tables and rows"
+  }, 
+  {
+    "path": "rdbms", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "rdbms", 
+    "desc": "Queries against an RDBMS."
+  }, 
+  {
+    "path": "/home/XLS_PlatForm/hue-release-3.9.0/kettle", 
+    "author": "lumanjiao", 
+    "version": "0.1", 
+    "name": "kettle", 
+    "desc": "kettle control"
+  }, 
+  {
+    "path": "metastore", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "metastore", 
+    "desc": "Metastore browser"
+  }, 
+  {
+    "path": "beeswax", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "beeswax", 
+    "desc": "Hive Interface on Hue"
+  }, 
+  {
+    "path": "jobsub", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "jobsub", 
+    "desc": "Hadoop Job Submission"
+  }, 
+  {
+    "path": "sqoop", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "sqoop", 
+    "desc": "Move big data to and from Hadoop in a few clicks."
+  }, 
+  {
+    "path": "about", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "about", 
+    "desc": "Displays 'about' info for easier trouble-shooting"
+  }, 
+  {
+    "path": "useradmin", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "useradmin", 
+    "desc": "Hue User Administration"
+  }, 
+  {
+    "path": "proxy", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "proxy", 
+    "desc": "Reverse Proxy"
+  }, 
+  {
+    "path": "oozie", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "oozie", 
+    "desc": "Oozie Editor/Dashboard"
+  }, 
+  {
+    "path": "spark", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "spark", 
+    "desc": "Web UI for submitting Spark applications"
+  }, 
+  {
+    "path": "filebrowser", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "filebrowser", 
+    "desc": "HDFS browser"
+  }, 
+  {
+    "path": "search", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "search", 
+    "desc": "Search all your Big Data"
+  }, 
+  {
+    "path": "jobbrowser", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "jobbrowser", 
+    "desc": "Hadoop Job Browser"
+  }, 
+  {
+    "path": "/home/XLS_PlatForm/hue-release-3.9.0/NodeState", 
+    "author": "lumanjiao", 
+    "version": "0.1", 
+    "name": "NodeState", 
+    "desc": "Node State"
+  }, 
+  {
+    "path": "security", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "security", 
+    "desc": "Hue Security Administration"
+  }, 
+  {
+    "path": "impala", 
+    "author": "Hue", 
+    "version": "3.9.0", 
+    "name": "impala", 
+    "desc": "Real time queries all your Big Data"
+  }
+]

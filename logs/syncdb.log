@@ -1,0 +1,158 @@
+[13/Dec/2018 17:37:04 ] settings     INFO     Welcome to Hue 3.9.0
+[13/Dec/2018 17:37:04 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[13/Dec/2018 17:37:04 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, NodeState
+[13/Dec/2018 17:37:04 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(NodeState: NodeState)
+[13/Dec/2018 17:37:04 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[13/Dec/2018 01:37:04 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 1 added, 0 updated, 25 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:37:05 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 17:40:50 ] settings     INFO     Welcome to Hue 3.9.0
+[13/Dec/2018 17:40:50 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[13/Dec/2018 17:40:51 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, NodeState, SparkState
+[13/Dec/2018 17:40:51 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(NodeState: NodeState),DesktopModule(SparkState: SparkState)
+[13/Dec/2018 17:40:51 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[13/Dec/2018 01:40:51 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 1 added, 0 updated, 26 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[13/Dec/2018 01:40:51 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 16:39:56 ] settings     INFO     Welcome to Hue 3.9.0
+[14/Dec/2018 16:39:56 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[14/Dec/2018 16:39:56 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, NodeState, SparkState
+[14/Dec/2018 16:39:56 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(NodeState: NodeState),DesktopModule(SparkState: SparkState)
+[14/Dec/2018 16:39:56 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[14/Dec/2018 00:39:56 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:56 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:57 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:57 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:57 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:57 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:39:57 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 16:40:01 ] settings     INFO     Welcome to Hue 3.9.0
+[14/Dec/2018 16:40:01 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[14/Dec/2018 16:40:01 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, NodeState, SparkState
+[14/Dec/2018 16:40:01 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(NodeState: NodeState),DesktopModule(SparkState: SparkState)
+[14/Dec/2018 16:40:02 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[14/Dec/2018 00:40:02 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[14/Dec/2018 00:40:02 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 27 up to date, 0 stale
+[17/Dec/2018 13:44:35 ] settings     INFO     Welcome to Hue 3.9.0
+[17/Dec/2018 13:44:35 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[17/Dec/2018 13:44:35 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, NodeState, SparkState, kettle
+[17/Dec/2018 13:44:35 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(NodeState: NodeState),DesktopModule(SparkState: SparkState),DesktopModule(kettle: kettle)
+[17/Dec/2018 13:44:35 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[16/Dec/2018 21:44:36 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 1 added, 0 updated, 27 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[16/Dec/2018 21:44:37 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 28 up to date, 0 stale
+[02/Jan/2019 16:12:57 ] settings     INFO     Welcome to Hue 3.9.0
+[02/Jan/2019 16:12:57 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[02/Jan/2019 16:12:57 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper, DataExport, NodeState, SparkState, kettle
+[02/Jan/2019 16:12:57 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper),DesktopModule(DataExport: DataExport),DesktopModule(NodeState: NodeState),DesktopModule(SparkState: SparkState),DesktopModule(kettle: kettle)
+[02/Jan/2019 16:12:57 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[02/Jan/2019 00:12:58 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 1 added, 0 updated, 28 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale
+[02/Jan/2019 00:12:59 -0800] models       INFO     HuePermissions: 0 added, 0 updated, 29 up to date, 0 stale

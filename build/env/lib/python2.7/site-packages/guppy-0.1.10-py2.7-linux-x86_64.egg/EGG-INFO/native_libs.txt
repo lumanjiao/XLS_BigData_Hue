@@ -1,0 +1,2 @@
+guppy/heapy/heapyc.so
+guppy/sets/setsc.so

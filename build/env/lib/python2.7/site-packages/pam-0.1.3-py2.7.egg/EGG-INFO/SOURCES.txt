@@ -1,0 +1,9 @@
+pam.py
+setup.cfg
+setup.py
+pam.egg-info/PKG-INFO
+pam.egg-info/SOURCES.txt
+pam.egg-info/dependency_links.txt
+pam.egg-info/entry_points.txt
+pam.egg-info/top_level.txt
+pam.egg-info/zip-safe

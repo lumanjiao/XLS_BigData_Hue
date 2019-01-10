@@ -1,0 +1,7 @@
+README
+lockfile.py
+setup.py
+lockfile.egg-info/PKG-INFO
+lockfile.egg-info/SOURCES.txt
+lockfile.egg-info/dependency_links.txt
+lockfile.egg-info/top_level.txt

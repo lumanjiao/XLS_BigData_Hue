@@ -1,0 +1,56 @@
+[
+   {
+      "name":"Sample: Top salary",
+      "desc":"Top salary 2007 above $100k",
+      "type":"0",
+      "data":{
+         "query":{
+            "query":"SELECT sample_07.description, sample_07.salary\r\nFROM\r\n  sample_07\r\nWHERE\r\n( sample_07.salary > 100000)\r\nORDER BY sample_07.salary DESC\r\nLIMIT 1000",
+            "type":0,
+            "email_notify":false,
+            "is_parameterized":false,
+            "database":"default"
+         },
+         "functions":[ ],
+         "VERSION":"0.4.1",
+         "file_resources":[ ],
+         "settings":[ ]
+      }
+   },
+   {
+      "name":"Sample: Salary growth",
+      "desc":"Salary growth (sorted) from 2007-08",
+      "type":"0",
+      "data":{
+         "query":{
+            "query":"SELECT s07.description, s07.salary, s08.salary,\r\n  s08.salary - s07.salary\r\nFROM\r\n  sample_07 s07 JOIN sample_08 s08\r\nON ( s07.code = s08.code)\r\nWHERE\r\n s07.salary < s08.salary\r\nORDER BY s08.salary-s07.salary DESC\r\nLIMIT 1000",
+            "type":0,
+            "email_notify":false,
+            "is_parameterized":false,
+            "database":"default"
+         },
+         "functions":[ ],
+         "VERSION":"0.4.1",
+         "file_resources":[ ],
+         "settings":[ ]
+      }
+   },
+   {
+      "name":"Sample: Job loss",
+      "desc":"Job loss among the top earners 2007-08",
+      "type":"0",
+      "data":{
+         "query":{
+            "query":"SELECT s07.description, s07.total_emp, s08.total_emp, s07.salary\r\nFROM\r\n  sample_07 s07 JOIN \r\n  sample_08 s08\r\nON ( s07.code = s08.code )\r\nWHERE\r\n( s07.total_emp > s08.total_emp\r\n AND s07.salary > 100000 )\r\nORDER BY s07.salary DESC\nLIMIT 1000",
+            "type":0,
+            "email_notify":false,
+            "is_parameterized":false,
+            "database":"default"
+         },
+         "functions":[ ],
+         "VERSION":"0.4.1",
+         "file_resources":[ ],
+         "settings":[ ]
+      }
+   }
+]

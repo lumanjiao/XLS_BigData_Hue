@@ -1,0 +1,3 @@
+[console_scripts]
+parquet = parquet.__main__:main
+

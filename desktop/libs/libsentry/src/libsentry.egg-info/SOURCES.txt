@@ -1,0 +1,15 @@
+setup.py
+src/libsentry/__init__.py
+src/libsentry/api.py
+src/libsentry/client.py
+src/libsentry/conf.py
+src/libsentry/models.py
+src/libsentry/sentry_site.py
+src/libsentry/test_client.py
+src/libsentry/tests.py
+src/libsentry.egg-info/PKG-INFO
+src/libsentry.egg-info/SOURCES.txt
+src/libsentry.egg-info/dependency_links.txt
+src/libsentry.egg-info/entry_points.txt
+src/libsentry.egg-info/requires.txt
+src/libsentry.egg-info/top_level.txt

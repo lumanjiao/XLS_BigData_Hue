@@ -1,0 +1,503 @@
+/*
+ Licensed to Cloudera, Inc. under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  Cloudera, Inc. licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+html {
+  height: 100%;
+}
+body {
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-full {
+  height:100%;
+}
+
+.main-content {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+}
+
+.snippet-move-placeholder {
+  margin: 10px;
+  height: 100px;
+  background-color: #FAFAFA;
+  border: 2px dotted #CCC;
+}
+
+.snippet-move-helper {
+  margin: 10px;
+  background-color: #FFF;
+  border: 1px solid #F1F1F1;
+}
+
+.panel-container {
+  position: relative;
+}
+
+.left-panel {
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+}
+
+.resizer {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  padding-left:1px;
+  cursor: ew-resize;
+}
+
+.resize-bar {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #F1F1F1;
+}
+
+.right-panel {
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+}
+
+.question {
+  margin: 10px;
+}
+
+.snippet {
+  margin: 10px;
+}
+
+.snippet-body {
+  width: 200%;
+  min-height: 40px;
+}
+
+.snippet-settings {
+  width: 200%;
+  margin-left: -100%;
+  background-color: #FFF;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.snippet-settings-header > h4 {
+  margin: 0;
+  padding: 10px;
+}
+.snippet-settings-body {
+  padding: 10px;
+}
+
+.CodeMirror {
+  height: auto;
+}
+
+.card .card-heading.simple {
+  border: none;
+}
+
+.add-snippet {
+  margin: 10px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.add-snippet-button {
+  z-index: 300;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  padding: 20px;
+}
+
+.add-last-used-snippet {
+  color: #CCC;
+  cursor: pointer;
+}
+
+.add-snippet-alt {
+  z-index: 400;
+  position: absolute;
+  background-color: #61abd1;
+  color: #DBE8F1;
+  font-size: 11px;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.add-last-used-snippet,
+.add-snippet-alt {
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s;
+  -ms-transition: color 0.3s ease, -ms-transform 0.3s;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.add-snippet-alt:hover {
+  color: #FFF;
+}
+.add-last-used-snippet:hover,
+.add-snippet-alt:hover {
+  -webkit-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+
+.spark-btn {
+  border-left: none;
+  border-right: none;
+  width: 14px;
+  opacity: 0.8;
+  border-radius: 0;
+}
+
+.spark-btn:hover {
+  opacity: 1;
+}
+
+.codeMirror-overlaybtn {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 0;
+  z-index: 999;
+}
+
+
+.nav {
+  margin-bottom: 0;
+}
+
+.nav i {
+  line-height: 20px !important;
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.nav-list {
+  padding-left: 0;
+}
+
+.dropdown-menu li {
+  font-size: 14px;
+}
+
+.dropdown a.dropdown-toggle {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.search-bar {
+  background-color: #F5F5F5;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  width: 100%;
+  position: fixed;
+  top: 28px;
+  z-index: 1000;
+}
+
+.search-bar input {
+  margin-left: 10px;
+  padding-right: 20px;
+}
+
+.search-bar ul li {
+  text-align: right;
+}
+
+.search-bar ul.dropdown-menu li {
+  text-align: left;
+}
+
+.tab-content {
+  background-color: #FFFFFF;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.snippet-icon {
+  color: #338bb8;
+  height: 16px;
+  width: 16px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.row-container.is-editing {
+  border: none;
+}
+
+.ui-sortable {
+  background-color: #FFF;
+  min-height: 0px;
+}
+
+.assist {
+  margin-top: 2px;
+  padding: 8px;
+}
+
+.assist-main {
+  overflow-y: auto;
+}
+
+.editable-empty, .editable-empty:hover {
+  color: #DDD !important;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+  cursor: pointer !important;
+}
+
+.editable-click.editable-disabled, a.editable-click.editable-disabled, a.editable-click.editable-disabled:hover {
+  cursor: default !important;
+}
+
+.results table tr td {
+  white-space: nowrap;
+}
+
+[contenteditable]:focus {
+  outline: none;
+}
+
+.snippet-progress-container {
+  height: 4px;
+  width: 100%;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.snippet-footer-actions-bar {
+  padding: 10px 3px 0 3px;
+  height: 29px;
+}
+
+.text-snippet h2 {
+  padding-left: 0 !important;
+}
+
+.span12.nomargin {
+  margin-left: 0;
+}
+
+.show-assist {
+  position: fixed;
+  top: 80px;
+  background-color: #FFF;
+  width: 16px;
+  height: 24px;
+  line-height: 24px;
+  margin-left: -2px;
+  text-align: center;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 1000;
+  transition: margin-left 0.2s linear;
+}
+
+.show-assist:hover {
+  margin-left: 0;
+}
+
+.hide-assist {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  z-index: 1000;
+  color: #D1D1D1;
+  font-size: 12px;
+  transition: margin-right 0.2s linear, color 0.5s ease;
+}
+
+.hide-assist:hover {
+  margin-right: 2px;
+  color: #338bb8;
+}
+
+.logs {
+  padding: 3px;
+  font-size: 11px;
+  height: 80px;
+  overflow-y: auto;
+}
+
+h1.empty {
+  margin-top: 50px;
+  text-align: center;
+  color: #DDD;
+}
+
+.toggle-result-settings {
+  float: left;
+  padding: 3px;
+  margin-top: 31px;
+  width: 10px;
+  text-align: center;
+}
+
+.toggle-result-settings i {
+  display: none;
+}
+
+.toggle-result-settings.hoverable {
+  cursor: pointer;
+}
+
+.toggle-result-settings.hoverable i {
+  display: inline-block;
+}
+
+.toggle-result-settings.hoverable:hover {
+  background-color: #F0F0F0;
+}
+
+.chart-icon {
+  width: 15px;
+  text-align: center;
+}
+
+.resize-panel a {
+  cursor: ns-resize;
+  color: #666;
+  position: absolute;
+}
+
+.progress .bar {
+  background-repeat: repeat-x;
+}
+
+.progress, .progress-neutral .bar {
+  background-color: #DDD;
+}
+
+.medium-editor-toolbar-form label {
+  min-height: 20px;
+}
+
+.medium-editor-toolbar-form input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.medium-editor-toolbar li button {
+  padding: 0 !important;
+  height: 40px !important;
+  min-width: 40px !important;
+}
+
+.medium-toolbar-arrow-under:after {
+  top: 40px !important;
+}
+
+@media print {
+  .navigator, .assist-container, .result-settings, .left-panel, a.btn, button, .CodeMirror-gutters, .add-snippet {
+    display: none !important;
+  }
+
+  .CodeMirror {
+    border: none;
+  }
+}
+
+.widget-type.dropdown a.dropdown-toggle {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.widget-type.dropdown .dropdown-toggle .caret {
+  margin-top: 0;
+}
+
+.no-underline:hover {
+  text-decoration: none!important;
+}
+
+input[type="text"].filechooser-input {
+  border-right: none;
+  margin-bottom: 0;
+}
+
+.fileChooserBtn {
+  height: 31px;
+}
+
+table.airy tr td {
+  padding: 4px;
+}
+
+.ace-editor {
+  height: 200px;
+}
+
+.ace-filechooser {
+  position: absolute;
+  display: none;
+  z-index: 20000;
+  background-color: #FFFFFF;
+  padding: 10px;
+  min-width: 350px;
+}
+
+.spark-property {
+  display: inline-block;
+  vertical-align: top;
+  padding-top:10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.spark-property-remove {
+  position: absolute;
+  top: -8px;
+  z-index: 1000;
+  right: 0;
+}
+
+.hover-actions a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hover-dropdown {
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}

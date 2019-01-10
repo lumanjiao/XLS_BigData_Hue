@@ -1,0 +1,4 @@
+
+    [babel.extractors]
+    django = babeldjango.extract:extract_django
+    

@@ -1,0 +1,12 @@
+setup.py
+src/liboauth/__init__.py
+src/liboauth/backend.py
+src/liboauth/conf.py
+src/liboauth/urls.py
+src/liboauth/views.py
+src/liboauth.egg-info/PKG-INFO
+src/liboauth.egg-info/SOURCES.txt
+src/liboauth.egg-info/dependency_links.txt
+src/liboauth.egg-info/entry_points.txt
+src/liboauth.egg-info/requires.txt
+src/liboauth.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+setup.py
+src/libopenid/__init__.py
+src/libopenid/backend.py
+src/libopenid/conf.py
+src/libopenid/forms.py
+src/libopenid/metrics.py
+src/libopenid/openid_settings.py
+src/libopenid/urls.py
+src/libopenid/views.py
+src/libopenid.egg-info/PKG-INFO
+src/libopenid.egg-info/SOURCES.txt
+src/libopenid.egg-info/dependency_links.txt
+src/libopenid.egg-info/entry_points.txt
+src/libopenid.egg-info/requires.txt
+src/libopenid.egg-info/top_level.txt

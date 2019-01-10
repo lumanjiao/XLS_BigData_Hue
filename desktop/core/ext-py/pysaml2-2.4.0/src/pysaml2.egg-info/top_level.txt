@@ -1,0 +1,11 @@
+s2repoze
+saml2
+saml2/attributemaps
+saml2/authn_context
+saml2/entity_category
+saml2/extension
+saml2/profile
+saml2/schema
+saml2/userinfo
+xmldsig
+xmlenc

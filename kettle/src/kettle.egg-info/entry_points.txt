@@ -1,0 +1,3 @@
+[desktop.sdk.application]
+kettle=kettle
+

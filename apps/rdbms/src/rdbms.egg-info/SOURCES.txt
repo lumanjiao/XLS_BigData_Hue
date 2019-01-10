@@ -1,0 +1,16 @@
+setup.py
+src/rdbms/__init__.py
+src/rdbms/api.py
+src/rdbms/conf.py
+src/rdbms/forms.py
+src/rdbms/models.py
+src/rdbms/settings.py
+src/rdbms/tests.py
+src/rdbms/urls.py
+src/rdbms/views.py
+src/rdbms.egg-info/PKG-INFO
+src/rdbms.egg-info/SOURCES.txt
+src/rdbms.egg-info/dependency_links.txt
+src/rdbms.egg-info/entry_points.txt
+src/rdbms.egg-info/requires.txt
+src/rdbms.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+AUTHORS
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+requests_kerberos/__init__.py
+requests_kerberos/compat.py
+requests_kerberos/exceptions.py
+requests_kerberos/kerberos_.py
+requests_kerberos.egg-info/PKG-INFO
+requests_kerberos.egg-info/SOURCES.txt
+requests_kerberos.egg-info/dependency_links.txt
+requests_kerberos.egg-info/requires.txt
+requests_kerberos.egg-info/top_level.txt

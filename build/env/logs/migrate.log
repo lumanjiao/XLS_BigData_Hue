@@ -1,0 +1,1150 @@
+[13/Dec/2018 16:19:16 ] settings     INFO     Welcome to Hue 3.9.0
+[13/Dec/2018 16:19:16 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[13/Dec/2018 16:19:16 ] appmanager   DEBUG    Loaded Desktop Applications: indexer, about, beeswax, filebrowser, hbase, help, impala, jobbrowser, jobsub, metastore, oozie, pig, proxy, rdbms, search, security, spark, sqoop, useradmin, zookeeper
+[13/Dec/2018 16:19:16 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer),DesktopModule(About: about),DesktopModule(Hive Editor: beeswax),DesktopModule(File Browser: filebrowser),DesktopModule(HBase Browser: hbase),DesktopModule(Help: help),DesktopModule(Impala Editor: impala),DesktopModule(Job Browser: jobbrowser),DesktopModule(Job Designer: jobsub),DesktopModule(Metastore Manager: metastore),DesktopModule(Oozie Editor/Dashboard: oozie),DesktopModule(Pig Editor: pig),DesktopModule(Proxy: proxy),DesktopModule(RDBMS UI: rdbms),DesktopModule(Solr Search: search),DesktopModule(Hadoop Security: security),DesktopModule(Spark: spark),DesktopModule(Sqoop: sqoop),DesktopModule(User Admin: useradmin),DesktopModule(ZooKeeper Browser: zookeeper)
+[13/Dec/2018 16:19:16 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[13/Dec/2018 00:19:16 -0800] __init__     WARNING  Couldn't import snappy. Support for snappy compression disabled.
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `pig_document` (`owner_id` integer NOT NULL, `is_design` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `pig_pigscript` (`document_ptr_id` integer NOT NULL PRIMARY KEY, `data` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `pig_document` ADD CONSTRAINT `owner_id_refs_id_8d390f80` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `pig_document_cb902d83` ON `pig_document` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `pig_document_63cbf1fe` ON `pig_document` (`is_design`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `pig_pigscript` ADD CONSTRAINT `document_ptr_id_refs_id_17b4e137` FOREIGN KEY (`document_ptr_id`) REFERENCES `pig_document` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_job` (`is_shared` bool NOT NULL, `description` varchar(1024) NOT NULL, `parameters` longtext NOT NULL, `deployment_dir` varchar(1024) NOT NULL, `schema_version` varchar(128) NOT NULL, `last_modified` datetime NOT NULL, `owner_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_workflow` (`job_xml` varchar(512) NOT NULL, `end_id` integer NULL, `is_single` bool NOT NULL, `job_ptr_id` integer NOT NULL PRIMARY KEY, `job_properties` longtext NOT NULL, `start_id` integer NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_link` (`comment` varchar(1024) NOT NULL, `name` varchar(40) NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `parent_id` integer NOT NULL, `child_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_node` (`description` varchar(1024) NOT NULL, `workflow_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `node_type` varchar(64) NOT NULL, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_mapreduce` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `jar_path` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL UNIQUE, `prepares` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_streaming` (`files` varchar(512) NOT NULL, `mapper` varchar(512) NOT NULL, `reducer` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_java` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `jar_path` varchar(512) NOT NULL, `java_opts` varchar(256) NOT NULL, `args` longtext NOT NULL, `job_properties` longtext NOT NULL, `prepares` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `main_class` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_pig` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `params` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `prepares` longtext NOT NULL, `script_path` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_start` (`node_ptr_id` integer NOT NULL UNIQUE)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_end` (`node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_kill` (`message` varchar(256) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_fork` (`node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_join` (`node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_coordinator` (`end` datetime NOT NULL, `concurrency` smallint UNSIGNED NULL, `frequency_number` smallint NOT NULL, `workflow_id` integer NULL, `job_ptr_id` integer NOT NULL PRIMARY KEY, `frequency_unit` varchar(20) NOT NULL, `start` datetime NOT NULL, `timeout` smallint NULL, `timezone` varchar(24) NOT NULL, `throttle` smallint UNSIGNED NULL, `execution` varchar(10) NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_dataset` (`description` varchar(1024) NOT NULL, `frequency_number` smallint NOT NULL, `coordinator_id` integer NOT NULL, `frequency_unit` varchar(20) NOT NULL, `uri` varchar(1024) NOT NULL, `start` datetime NOT NULL, `timezone` varchar(24) NOT NULL, `done_flag` varchar(64) NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_datainput` (`coordinator_id` integer NOT NULL, `dataset_id` integer NOT NULL UNIQUE, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_dataoutput` (`coordinator_id` integer NOT NULL, `dataset_id` integer NOT NULL UNIQUE, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_history` (`submission_date` datetime NOT NULL, `job_id` integer NOT NULL, `properties` longtext NOT NULL, `oozie_job_id` varchar(128) NOT NULL, `submitter_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_job_b91b90da` ON `oozie_job` (`is_shared`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_job_5ccb38e5` ON `oozie_job` (`last_modified`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ADD CONSTRAINT `owner_id_refs_id_b9eb9598` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_job_cb902d83` ON `oozie_job` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ADD CONSTRAINT `end_id_refs_id_92f16762` FOREIGN KEY (`end_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_workflow_536e023f` ON `oozie_workflow` (`end_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ADD CONSTRAINT `job_ptr_id_refs_id_8bb519fb` FOREIGN KEY (`job_ptr_id`) REFERENCES `oozie_job` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ADD CONSTRAINT `start_id_refs_id_92f16762` FOREIGN KEY (`start_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_workflow_6f89268d` ON `oozie_workflow` (`start_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_link` ADD CONSTRAINT `parent_id_refs_id_4c5f8d9b` FOREIGN KEY (`parent_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_link_410d0aac` ON `oozie_link` (`parent_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_link` ADD CONSTRAINT `child_id_refs_id_4c5f8d9b` FOREIGN KEY (`child_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_link_0b25fb00` ON `oozie_link` (`child_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_node` ADD CONSTRAINT `workflow_id_refs_job_ptr_id_61733cb8` FOREIGN KEY (`workflow_id`) REFERENCES `oozie_workflow` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_node_17b2fdb1` ON `oozie_node` (`workflow_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ADD CONSTRAINT `node_ptr_id_refs_id_faafd42d` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_streaming` ADD CONSTRAINT `node_ptr_id_refs_id_5857900b` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ADD CONSTRAINT `node_ptr_id_refs_id_c5504fe4` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_pig` ADD CONSTRAINT `node_ptr_id_refs_id_3a145eb2` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` ADD CONSTRAINT `node_ptr_id_refs_id_ed4928be` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_end` ADD CONSTRAINT `node_ptr_id_refs_id_d2ab2ce2` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_kill` ADD CONSTRAINT `node_ptr_id_refs_id_6a5609f4` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_fork` ADD CONSTRAINT `node_ptr_id_refs_id_08311288` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_join` ADD CONSTRAINT `node_ptr_id_refs_id_5fe5ad59` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_coordinator` ADD CONSTRAINT `workflow_id_refs_job_ptr_id_eff253f3` FOREIGN KEY (`workflow_id`) REFERENCES `oozie_workflow` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_coordinator_17b2fdb1` ON `oozie_coordinator` (`workflow_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_coordinator` ADD CONSTRAINT `job_ptr_id_refs_id_02836103` FOREIGN KEY (`job_ptr_id`) REFERENCES `oozie_job` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ADD CONSTRAINT `coordinator_id_refs_job_ptr_id_c1a45b56` FOREIGN KEY (`coordinator_id`) REFERENCES `oozie_coordinator` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_dataset_a376e044` ON `oozie_dataset` (`coordinator_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_datainput` ADD CONSTRAINT `coordinator_id_refs_job_ptr_id_a7f5bae4` FOREIGN KEY (`coordinator_id`) REFERENCES `oozie_coordinator` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_datainput_a376e044` ON `oozie_datainput` (`coordinator_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_datainput` ADD CONSTRAINT `dataset_id_refs_id_6d9c387e` FOREIGN KEY (`dataset_id`) REFERENCES `oozie_dataset` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataoutput` ADD CONSTRAINT `coordinator_id_refs_job_ptr_id_35e76a9d` FOREIGN KEY (`coordinator_id`) REFERENCES `oozie_coordinator` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_dataoutput_a376e044` ON `oozie_dataoutput` (`coordinator_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataoutput` ADD CONSTRAINT `dataset_id_refs_id_c25267c2` FOREIGN KEY (`dataset_id`) REFERENCES `oozie_dataset` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_history_0ebd36f3` ON `oozie_history` (`submission_date`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_history` ADD CONSTRAINT `job_id_refs_id_aca84a0b` FOREIGN KEY (`job_id`) REFERENCES `oozie_job` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_history_218f3960` ON `oozie_history` (`job_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_history` ADD CONSTRAINT `submitter_id_refs_id_be4aca60` FOREIGN KEY (`submitter_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_history_5f7282ee` ON `oozie_history` (`submitter_id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_hive` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `params` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `prepares` longtext NOT NULL, `script_path` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_hive` ADD CONSTRAINT `node_ptr_id_refs_id_7061d230` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_sqoop` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `params` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `prepares` longtext NOT NULL, `script_path` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` ADD CONSTRAINT `node_ptr_id_refs_id_51abc83b` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_ssh` (`capture_output` bool NOT NULL, `host` varchar(256) NOT NULL, `params` longtext NOT NULL, `user` varchar(64) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `command` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_ssh` ADD CONSTRAINT `node_ptr_id_refs_id_e6a21afc` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_shell` (`files` varchar(512) NOT NULL, `job_xml` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `capture_output` bool NOT NULL, `params` longtext NOT NULL, `archives` varchar(512) NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `prepares` longtext NOT NULL, `command` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_shell` ADD CONSTRAINT `node_ptr_id_refs_id_6a9f9c63` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_pig` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_pig` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_pig` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_pig` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ;" with params "[]"
+[13/Dec/2018 00:19:17 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_streaming` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_streaming` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_streaming` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_streaming` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_shell` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_shell` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_shell` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_shell` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_hive` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_hive` MODIFY `files` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_hive` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_hive` MODIFY `archives` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_sqoop` MODIFY `script_path` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_distcp` (`prepares` longtext NOT NULL, `job_xml` varchar(512) NOT NULL, `params` longtext NOT NULL, `job_properties` longtext NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_distcp` ADD CONSTRAINT `node_ptr_id_refs_id_94a882fe` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_decision` (`node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_decision` ADD CONSTRAINT `node_ptr_id_refs_id_67bc250e` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_fs` (`mkdirs` longtext NOT NULL, `touchzs` longtext NOT NULL, `chmods` longtext NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY, `moves` longtext NOT NULL, `deletes` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_fs` ADD CONSTRAINT `node_ptr_id_refs_id_f2c6c820` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_email` (`cc` longtext NOT NULL, `to` longtext NOT NULL, `subject` longtext NOT NULL, `body` longtext NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_email` ADD CONSTRAINT `node_ptr_id_refs_id_a770716b` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_subworkflow` (`propagate_configuration` bool NOT NULL, `job_properties` longtext NOT NULL, `sub_workflow_id` integer NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_email` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_email` MODIFY `subject` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_email` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_email` MODIFY `body` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` ADD CONSTRAINT `sub_workflow_id_refs_job_ptr_id_b9cfb611` FOREIGN KEY (`sub_workflow_id`) REFERENCES `oozie_workflow` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_subworkflow_7c14fdc3` ON `oozie_subworkflow` (`sub_workflow_id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` ADD CONSTRAINT `node_ptr_id_refs_id_9a2f74e6` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_generic` (`xml` longtext NOT NULL, `node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_generic` ADD CONSTRAINT `node_ptr_id_refs_id_52bde32b` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_decisionend` (`node_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_decisionend` ADD CONSTRAINT `node_ptr_id_refs_id_31e174a0` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ADD COLUMN `advanced_start_instance` varchar(128) NOT NULL DEFAULT '0';" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` MODIFY `advanced_start_instance` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ALTER COLUMN `advanced_start_instance` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ADD COLUMN `instance_choice` varchar(10) NOT NULL DEFAULT 'default';" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` MODIFY `instance_choice` varchar(10) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ALTER COLUMN `instance_choice` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ADD COLUMN `advanced_end_instance` varchar(128) NOT NULL DEFAULT '0';" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` MODIFY `advanced_end_instance` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_dataset` ALTER COLUMN `advanced_end_instance` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] 0016_auto__add_field_coordinator_job_properties WARNING  (1054, "Unknown column 'job_properties' in 'field list'")
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:18 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_coordinator` ADD COLUMN `job_properties` longtext NOT NULL;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_coordinator` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_coordinator` MODIFY `job_properties` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_bundledcoordinator` (`coordinator_id` integer NOT NULL, `parameters` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `bundle_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE TABLE `oozie_bundle` (`kick_off_time` datetime NOT NULL, `job_ptr_id` integer NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_bundledcoordinator` ADD CONSTRAINT `coordinator_id_refs_job_ptr_id_4b9a476a` FOREIGN KEY (`coordinator_id`) REFERENCES `oozie_coordinator` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_bundledcoordinator_a376e044` ON `oozie_bundledcoordinator` (`coordinator_id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_bundledcoordinator` ADD CONSTRAINT `bundle_id_refs_job_ptr_id_49f6b676` FOREIGN KEY (`bundle_id`) REFERENCES `oozie_bundle` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_bundledcoordinator_2243b87b` ON `oozie_bundledcoordinator` (`bundle_id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_bundle` ADD CONSTRAINT `job_ptr_id_refs_id_dfe854cc` FOREIGN KEY (`job_ptr_id`) REFERENCES `oozie_job` (`id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ADD COLUMN `managed` bool NOT NULL DEFAULT True;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` MODIFY `managed` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_workflow` ALTER COLUMN `managed` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ADD COLUMN `capture_output` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` MODIFY `capture_output` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ALTER COLUMN `capture_output` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` MODIFY `args` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_java` MODIFY `args` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ADD COLUMN `is_trashed` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` MODIFY `is_trashed` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ALTER COLUMN `is_trashed` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE INDEX `oozie_job_863b5435` ON `oozie_job` (`is_trashed`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` DROP FOREIGN KEY `node_ptr_id_refs_id_faafd42d`" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` MODIFY `node_ptr_id` integer NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ALTER COLUMN `node_ptr_id` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_mapreduce` ADD CONSTRAINT `node_ptr_id_refs_id_faafd42d` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` DROP FOREIGN KEY `node_ptr_id_refs_id_ed4928be`" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` MODIFY `node_ptr_id` integer NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` ALTER COLUMN `node_ptr_id` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_start` ADD CONSTRAINT `node_ptr_id_refs_id_ed4928be` FOREIGN KEY (`node_ptr_id`) REFERENCES `oozie_node` (`id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_node` ADD COLUMN `data` longtext NOT NULL;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_node` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_node` MODIFY `data` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ADD COLUMN `data` longtext NOT NULL;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_job` MODIFY `data` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` DROP FOREIGN KEY `sub_workflow_id_refs_job_ptr_id_b9cfb611`" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` ;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` MODIFY `sub_workflow_id` integer NULL;;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` ALTER COLUMN `sub_workflow_id` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `oozie_subworkflow` ADD CONSTRAINT `sub_workflow_id_refs_job_ptr_id_b9cfb611` FOREIGN KEY (`sub_workflow_id`) REFERENCES `oozie_workflow` (`job_ptr_id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_userpreferences` (`value` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `key` varchar(20) NOT NULL, `user_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` ADD CONSTRAINT `user_id_refs_id_6de51743` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:19 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_userpreferences_6340c63c` ON `desktop_userpreferences` (`user_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_settings` (`collect_usage` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_settings_02d738b3` ON `desktop_settings` (`collect_usage`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_settings` ADD COLUMN `tours_and_tutorials` bool NOT NULL DEFAULT True;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_settings` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_settings` MODIFY `tours_and_tutorials` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_settings` ALTER COLUMN `tours_and_tutorials` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_settings_73ca4b20` ON `desktop_settings` (`tours_and_tutorials`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `beeswax_metainstall` (`installed_example` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `beeswax_queryhistory` (`submission_date` datetime NOT NULL, `last_state` integer NOT NULL, `server_id` varchar(1024) NULL, `log_context` varchar(1024) NULL, `design_id` integer NULL, `owner_id` integer NOT NULL, `query` varchar(1024) NOT NULL, `has_results` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `beeswax_savedquery` (`name` varchar(64) NOT NULL, `type` integer NOT NULL, `is_auto` bool NOT NULL, `mtime` datetime NOT NULL, `owner_id` integer NOT NULL, `data` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `desc` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_queryhistory_bfe02e93` ON `beeswax_queryhistory` (`last_state`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD CONSTRAINT `design_id_refs_id_f8250ba5` FOREIGN KEY (`design_id`) REFERENCES `beeswax_savedquery` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_queryhistory_38ebade8` ON `beeswax_queryhistory` (`design_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD CONSTRAINT `owner_id_refs_id_d5c13755` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_queryhistory_cb902d83` ON `beeswax_queryhistory` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_savedquery_db558b3c` ON `beeswax_savedquery` (`is_auto`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ADD CONSTRAINT `owner_id_refs_id_9ecea72d` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_savedquery_cb902d83` ON `beeswax_savedquery` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `notify` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `notify` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `notify` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `server_name` varchar(128) NOT NULL DEFAULT '';" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `server_name` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `server_name` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `server_host` varchar(128) NOT NULL DEFAULT '';" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `server_host` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `server_host` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `server_port` smallint NOT NULL DEFAULT 0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `server_port` smallint NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `server_port` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `query` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `beeswax_session` (`last_used` datetime NOT NULL, `status_code` smallint UNSIGNED NOT NULL, `server_protocol_version` smallint NOT NULL, `secret` longtext NOT NULL, `owner_id` integer NOT NULL, `guid` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `server_type` varchar(128) NOT NULL DEFAULT 'BEESWAX';" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `server_type` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `server_type` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `server_guid` varchar(1024) NULL;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `operation_type` smallint NULL;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `operation_type` smallint NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `operation_type` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `modified_row_count` double precision NULL;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `modified_row_count` double precision NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `modified_row_count` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_session_cdfd3889` ON `beeswax_session` (`last_used`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_session` ADD CONSTRAINT `owner_id_refs_id_0417c1ac` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_session_cb902d83` ON `beeswax_session` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `statement_number` smallint NOT NULL DEFAULT 0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `statement_number` smallint NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `statement_number` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_session` ADD COLUMN `application` varchar(128) NOT NULL DEFAULT 'beeswax';" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_session` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_session` MODIFY `application` varchar(128) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_session` ALTER COLUMN `application` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ADD COLUMN `is_trashed` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` MODIFY `is_trashed` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ALTER COLUMN `is_trashed` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `beeswax_savedquery_863b5435` ON `beeswax_savedquery` (`is_trashed`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `query_type` smallint NOT NULL DEFAULT 0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `query_type` smallint NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `query_type` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_document` (`description` longtext NOT NULL, `extra` longtext NOT NULL, `object_id` integer UNSIGNED NOT NULL, `last_modified` datetime NOT NULL, `content_type_id` integer NOT NULL, `version` smallint NOT NULL, `owner_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_documentpermission` (`perms` longtext NOT NULL, `doc_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `documentpermission_users` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `documentpermission_id` integer NOT NULL, `user_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_users` ADD CONSTRAINT `documentpermission__documentpermission_id_6577517b9e586968_uniq` UNIQUE (`documentpermission_id`, `user_id`)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `documentpermission_groups` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `documentpermission_id` integer NOT NULL, `group_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_groups` ADD CONSTRAINT `documentpermission__documentpermission_id_69436afd449228fe_uniq` UNIQUE (`documentpermission_id`, `group_id`)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_documenttag` (`owner_id` integer NOT NULL, `tag` varchar(50) NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_document_tags` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `document_id` integer NOT NULL, `documenttag_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document_tags` ADD CONSTRAINT `desktop_document_tags_document_id_22435f97005dd9b0_uniq` UNIQUE (`document_id`, `documenttag_id`)" with params "[]"
+[13/Dec/2018 00:19:20 -0800] models       ERROR    error syncing beeswax
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 287, in sync
+    for job in find_jobs_with_no_doc(SavedQuery):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 96, in __iter__
+    self._fetch_all()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'beeswax_savedquery.is_redacted' in 'field list'")
+[13/Dec/2018 00:19:20 -0800] models       ERROR    error syncing search
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 307, in sync
+    for dashboard in Collection.objects.all():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 96, in __iter__
+    self._fetch_all()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'hue.search_collection' doesn't exist")
+[13/Dec/2018 00:19:20 -0800] models       ERROR    error syncing Document2
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 326, in sync
+    for job in find_jobs_with_no_doc(Document2):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 96, in __iter__
+    self._fetch_all()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'hue.desktop_document2' doesn't exist")
+[13/Dec/2018 00:19:20 -0800] models       INFO     Looking for documents that have no object
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document_5ccb38e5` ON `desktop_document` (`last_modified`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ADD CONSTRAINT `content_type_id_refs_id_800664c4` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document_37ef4eb4` ON `desktop_document` (`content_type_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ADD CONSTRAINT `owner_id_refs_id_6062a036` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document_cb902d83` ON `desktop_document` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` ADD CONSTRAINT `doc_id_refs_id_6e61f686` FOREIGN KEY (`doc_id`) REFERENCES `desktop_document` (`id`);" with params "[]"
+[13/Dec/2018 00:19:20 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_documentpermission_fbbb6049` ON `desktop_documentpermission` (`doc_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_users` ADD CONSTRAINT `documentpermission_id_refs_id_b8222d7f` FOREIGN KEY (`documentpermission_id`) REFERENCES `desktop_documentpermission` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `documentpermission_users_35c59db1` ON `documentpermission_users` (`documentpermission_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_users` ADD CONSTRAINT `user_id_refs_id_70816365` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `documentpermission_users_6340c63c` ON `documentpermission_users` (`user_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_groups` ADD CONSTRAINT `documentpermission_id_refs_id_b50c1f1d` FOREIGN KEY (`documentpermission_id`) REFERENCES `desktop_documentpermission` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `documentpermission_groups_35c59db1` ON `documentpermission_groups` (`documentpermission_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `documentpermission_groups` ADD CONSTRAINT `group_id_refs_id_dcacd481` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `documentpermission_groups_5f412f9a` ON `documentpermission_groups` (`group_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` ADD CONSTRAINT `owner_id_refs_id_a0e6eebe` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_documenttag_cb902d83` ON `desktop_documenttag` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_documenttag_5659cca2` ON `desktop_documenttag` (`tag`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document_tags` ADD CONSTRAINT `document_id_refs_id_599007de` FOREIGN KEY (`document_id`) REFERENCES `desktop_document` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document_tags_b7398729` ON `desktop_document_tags` (`document_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document_tags` ADD CONSTRAINT `documenttag_id_refs_id_f5f1db6f` FOREIGN KEY (`documenttag_id`) REFERENCES `desktop_documenttag` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document_tags_21e9f328` ON `desktop_document_tags` (`documenttag_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` MODIFY `name` varchar(255) NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ALTER COLUMN `name` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_document2` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `owner_id` integer NOT NULL, `name` varchar(255) NOT NULL, `description` longtext NOT NULL, `uuid` varchar(32) NOT NULL, `type` varchar(32) NOT NULL, `data` longtext NOT NULL, `extra` longtext NOT NULL, `last_modified` datetime NOT NULL, `version` smallint NOT NULL, `is_history` bool NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_document2_tags` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `from_document2_id` integer NOT NULL, `to_document2_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_tags` ADD CONSTRAINT `desktop_document2_tags_from_document2_id_30290bc57f13bcc9_uniq` UNIQUE (`from_document2_id`, `to_document2_id`)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE TABLE `desktop_document2_dependencies` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `from_document2_id` integer NOT NULL, `to_document2_id` integer NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_dependencies` ADD CONSTRAINT `desktop_document2_depen_from_document2_id_180cf2c525720117_uniq` UNIQUE (`from_document2_id`, `to_document2_id`)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` MODIFY `key` varchar(20) NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` ALTER COLUMN `key` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "UPDATE `desktop_userpreferences` SET `key`=%s WHERE `key` IS NULL" with params "[u'']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` MODIFY `key` varchar(20) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` MODIFY `value` longtext NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "UPDATE `desktop_userpreferences` SET `value`=%s WHERE `value` IS NULL" with params "[u'']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_userpreferences` MODIFY `value` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` MODIFY `perms` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` MODIFY `tag` varchar(50) NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` ALTER COLUMN `tag` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "UPDATE `desktop_documenttag` SET `tag`=%s WHERE `tag` IS NULL" with params "[u'']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` MODIFY `tag` varchar(50) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` MODIFY `extra` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` MODIFY `name` varchar(255) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ALTER COLUMN `name` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` MODIFY `description` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2` ADD CONSTRAINT `owner_id_refs_id_04b63201` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_cb902d83` ON `desktop_document2` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_6f6e1b62` ON `desktop_document2` (`uuid`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_403d8ff3` ON `desktop_document2` (`type`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_5ccb38e5` ON `desktop_document2` (`last_modified`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_f516c2b3` ON `desktop_document2` (`version`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_dd08191e` ON `desktop_document2` (`is_history`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_tags` ADD CONSTRAINT `from_document2_id_refs_id_297d33ea` FOREIGN KEY (`from_document2_id`) REFERENCES `desktop_document2` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_tags_5248ab40` ON `desktop_document2_tags` (`from_document2_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_tags` ADD CONSTRAINT `to_document2_id_refs_id_297d33ea` FOREIGN KEY (`to_document2_id`) REFERENCES `desktop_document2` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_tags_19db1b82` ON `desktop_document2_tags` (`to_document2_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_dependencies` ADD CONSTRAINT `from_document2_id_refs_id_a2dfdbb8` FOREIGN KEY (`from_document2_id`) REFERENCES `desktop_document2` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_dependencies_5248ab40` ON `desktop_document2_dependencies` (`from_document2_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2_dependencies` ADD CONSTRAINT `to_document2_id_refs_id_a2dfdbb8` FOREIGN KEY (`to_document2_id`) REFERENCES `desktop_document2` (`id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "CREATE INDEX `desktop_document2_dependencies_19db1b82` ON `desktop_document2_dependencies` (`to_document2_id`);" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2` MODIFY `uuid` varchar(36) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2` ALTER COLUMN `uuid` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` ;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` MODIFY `perms` varchar(10) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` ALTER COLUMN `perms` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documenttag` ADD CONSTRAINT `desktop_documenttag_owner_id_1d5f76680ee9998b_uniq` UNIQUE (`owner_id`, `tag`)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document` ADD CONSTRAINT `desktop_document_content_type_id_24066d293ce4f1bf_uniq` UNIQUE (`content_type_id`, `object_id`)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_documentpermission` ADD CONSTRAINT `desktop_documentpermission_doc_id_60b132dd84ab9469_uniq` UNIQUE (`doc_id`, `perms`)" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:21 -0800] generic      DEBUG    execute "ALTER TABLE `desktop_document2` ADD CONSTRAINT `desktop_document2_uuid_71ec93c81d6e68e7_uniq` UNIQUE (`uuid`, `version`, `is_history`)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ADD COLUMN `is_redacted` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` MODIFY `is_redacted` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ALTER COLUMN `is_redacted` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ADD COLUMN `is_redacted` bool NOT NULL DEFAULT False;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `is_redacted` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `is_redacted` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` MODIFY `server_port` integer UNSIGNED NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_queryhistory` ALTER COLUMN `server_port` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` MODIFY `name` varchar(80) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `beeswax_savedquery` ALTER COLUMN `name` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_jobdesign` (`description` varchar(1024) NOT NULL, `data` longtext NOT NULL, `last_modified` datetime NOT NULL, `owner_id` integer NOT NULL, `type` varchar(128) NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(40) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_checkforsetup` (`setup_run` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_jobdesign` ADD CONSTRAINT `owner_id_refs_id_753082e9` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE INDEX `jobsub_jobdesign_cb902d83` ON `jobsub_jobdesign` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_ooziestreamingaction` (`oozieaction_ptr_id` integer NOT NULL PRIMARY KEY, `files` varchar(512) NOT NULL, `mapper` varchar(512) NOT NULL, `reducer` varchar(512) NOT NULL, `job_properties` longtext NOT NULL, `archives` varchar(512) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_oozieaction` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `action_type` varchar(64) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_ooziedesign` (`description` varchar(1024) NOT NULL, `last_modified` datetime NOT NULL, `owner_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `root_action_id` integer NOT NULL, `name` varchar(64) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_jobhistory` (`owner_id` integer NOT NULL, `submission_date` datetime NOT NULL, `design_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `job_id` varchar(128) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_ooziemapreduceaction` (`oozieaction_ptr_id` integer NOT NULL PRIMARY KEY, `files` varchar(512) NOT NULL, `jar_path` varchar(512) NOT NULL, `archives` varchar(512) NOT NULL, `job_properties` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE TABLE `jobsub_ooziejavaaction` (`oozieaction_ptr_id` integer NOT NULL PRIMARY KEY, `files` varchar(512) NOT NULL, `jar_path` varchar(512) NOT NULL, `java_opts` varchar(256) NOT NULL, `args` longtext NOT NULL, `job_properties` longtext NOT NULL, `archives` varchar(512) NOT NULL, `main_class` varchar(256) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_checkforsetup` ADD COLUMN `setup_level` integer NOT NULL DEFAULT 0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_checkforsetup` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_checkforsetup` MODIFY `setup_level` integer NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_checkforsetup` ALTER COLUMN `setup_level` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziestreamingaction` ADD CONSTRAINT `oozieaction_ptr_id_refs_id_6dad0be7` FOREIGN KEY (`oozieaction_ptr_id`) REFERENCES `jobsub_oozieaction` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziedesign` ADD CONSTRAINT `owner_id_refs_id_55551230` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE INDEX `jobsub_ooziedesign_cb902d83` ON `jobsub_ooziedesign` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziedesign` ADD CONSTRAINT `root_action_id_refs_id_26319073` FOREIGN KEY (`root_action_id`) REFERENCES `jobsub_oozieaction` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE INDEX `jobsub_ooziedesign_ce106e64` ON `jobsub_ooziedesign` (`root_action_id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_jobhistory` ADD CONSTRAINT `owner_id_refs_id_58370e7c` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE INDEX `jobsub_jobhistory_cb902d83` ON `jobsub_jobhistory` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_jobhistory` ADD CONSTRAINT `design_id_refs_id_5e12bb2f` FOREIGN KEY (`design_id`) REFERENCES `jobsub_ooziedesign` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "CREATE INDEX `jobsub_jobhistory_38ebade8` ON `jobsub_jobhistory` (`design_id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziemapreduceaction` ADD CONSTRAINT `oozieaction_ptr_id_refs_id_85f71d45` FOREIGN KEY (`oozieaction_ptr_id`) REFERENCES `jobsub_oozieaction` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziejavaaction` ADD CONSTRAINT `oozieaction_ptr_id_refs_id_890da3c3` FOREIGN KEY (`oozieaction_ptr_id`) REFERENCES `jobsub_oozieaction` (`id`);" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziestreamingaction` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziestreamingaction` MODIFY `job_properties` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziemapreduceaction` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziemapreduceaction` MODIFY `job_properties` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziejavaaction` ;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziejavaaction` MODIFY `job_properties` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:22 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_jobdesign` ;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_jobdesign` MODIFY `data` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "
+            SELECT kc.`constraint_name`, kc.`column_name`, kc.`table_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "
+            SELECT c.constraint_name, c.table_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = %s
+        " with params "['hue']"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziejavaaction` ;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `jobsub_ooziejavaaction` MODIFY `args` longtext NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `search_facet` (`data` longtext NOT NULL, `enabled` bool NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `search_result` (`data` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `search_sorting` (`data` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `search_core` (`sorting_id` integer NOT NULL, `name` varchar(40) NOT NULL UNIQUE, `facets_id` integer NOT NULL, `enabled` bool NOT NULL, `label` varchar(100) NOT NULL, `result_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `properties` longtext NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_core` ADD CONSTRAINT `sorting_id_refs_id_cf4b62ab` FOREIGN KEY (`sorting_id`) REFERENCES `search_sorting` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_core_1ee0a855` ON `search_core` (`sorting_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_core` ADD CONSTRAINT `facets_id_refs_id_7087813f` FOREIGN KEY (`facets_id`) REFERENCES `search_facet` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_core_be9133f8` ON `search_core` (`facets_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_core` ADD CONSTRAINT `result_id_refs_id_177d805b` FOREIGN KEY (`result_id`) REFERENCES `search_result` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_core_f41c4334` ON `search_core` (`result_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "DROP TABLE `search_core` CASCADE;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `search_collection` (`properties` longtext NOT NULL, `sorting_id` integer NOT NULL, `name` varchar(40) NOT NULL, `facets_id` integer NOT NULL, `enabled` bool NOT NULL, `label` varchar(100) NOT NULL, `is_core_only` bool NOT NULL, `result_id` integer NOT NULL, `cores` longtext NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_collection` ADD CONSTRAINT `sorting_id_refs_id_63666e75` FOREIGN KEY (`sorting_id`) REFERENCES `search_sorting` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_collection_1ee0a855` ON `search_collection` (`sorting_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_collection` ADD CONSTRAINT `facets_id_refs_id_109f7b9d` FOREIGN KEY (`facets_id`) REFERENCES `search_facet` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_collection_be9133f8` ON `search_collection` (`facets_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_collection` ADD CONSTRAINT `result_id_refs_id_cef2c4d1` FOREIGN KEY (`result_id`) REFERENCES `search_result` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_collection_f41c4334` ON `search_collection` (`result_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_collection` ADD COLUMN `owner_id` integer NULL;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "ALTER TABLE `search_collection` ADD CONSTRAINT `owner_id_refs_id_fb75896c` FOREIGN KEY (`owner_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE INDEX `search_collection_cb902d83` ON `search_collection` (`owner_id`);" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:23 -0800] generic      DEBUG    execute "CREATE TABLE `useradmin_userprofile` (`home_directory` varchar(1024) NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL UNIQUE)" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE TABLE `useradmin_grouppermission` (`hue_permission_id` integer NOT NULL, `group_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE TABLE `useradmin_huepermission` (`action` varchar(100) NOT NULL, `app` varchar(30) NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `description` varchar(255) NOT NULL)" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ADD CONSTRAINT `user_id_refs_id_e66f296b` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_grouppermission` ADD CONSTRAINT `hue_permission_id_refs_id_53ff8024` FOREIGN KEY (`hue_permission_id`) REFERENCES `useradmin_huepermission` (`id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE INDEX `useradmin_grouppermission_9dd0e7a9` ON `useradmin_grouppermission` (`hue_permission_id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_grouppermission` ADD CONSTRAINT `group_id_refs_id_d2a5bba4` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE INDEX `useradmin_grouppermission_5f412f9a` ON `useradmin_grouppermission` (`group_id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE TABLE `useradmin_ldapgroup` (`group_id` integer NOT NULL, `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY)" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ADD COLUMN `creation_method` varchar(64) NOT NULL DEFAULT 'HUE';" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` MODIFY `creation_method` varchar(64) NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ALTER COLUMN `creation_method` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] models       ERROR    Failed to automatically create user profile.
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/apps/useradmin/src/useradmin/models.py", line 165, in create_profile_for_user
+    p.save()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/base.py", line 545, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/base.py", line 573, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/base.py", line 654, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/base.py", line 687, in _do_insert
+    using=using, raw=raw)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/manager.py", line 232, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 1514, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 903, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/MySQL_python-1.2.5-py2.7-linux-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'first_login' in 'field list'")
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_ldapgroup` ADD CONSTRAINT `group_id_refs_id_23c2c967` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "CREATE INDEX `useradmin_ldapgroup_5f412f9a` ON `useradmin_ldapgroup` (`group_id`);" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "SET FOREIGN_KEY_CHECKS=0;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ADD COLUMN `first_login` bool NOT NULL DEFAULT True;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` MODIFY `first_login` bool NOT NULL;;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] generic      DEBUG    execute "ALTER TABLE `useradmin_userprofile` ALTER COLUMN `first_login` DROP DEFAULT;" with params "[]"
+[13/Dec/2018 00:19:24 -0800] models       INFO     HuePermissions: 25 added, 0 updated, 0 up to date, 0 stale

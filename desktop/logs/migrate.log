@@ -1,0 +1,149 @@
+[13/Dec/2018 14:44:19 ] settings     INFO     Welcome to Hue 3.9.0
+[13/Dec/2018 14:44:19 ] appmanager   DEBUG    Loaded Desktop Libraries: hadoop, liboauth, liboozie, libopenid, librdbms, libsaml, libsentry, libsolr, libzookeeper
+[13/Dec/2018 14:44:19 ] appmanager   DEBUG    Loaded Desktop Applications: indexer
+[13/Dec/2018 14:44:19 ] settings     DEBUG    Installed Django modules: DesktopModule(hadoop: hadoop),DesktopModule(liboauth: liboauth),DesktopModule(liboozie: liboozie),DesktopModule(libopenid: libopenid),DesktopModule(librdbms: librdbms),DesktopModule(libsaml: libsaml),DesktopModule(libsentry: libsentry),DesktopModule(libsolr: libsolr),DesktopModule(libzookeeper: libzookeeper),DesktopModule(Hue: desktop),DesktopModule(Solr Indexer: indexer)
+[13/Dec/2018 14:44:19 ] settings     DEBUG    DESKTOP_DB_TEST_NAME SET: /home/XLS_PlatForm/hue-release-3.9.0/desktop/desktop-test.db
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_userpreferences" ("value" text NOT NULL, "id" integer NOT NULL PRIMARY KEY, "key" varchar(20) NOT NULL, "user_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_userpreferences_6340c63c" ON "desktop_userpreferences" ("user_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_settings" ("collect_usage" bool NOT NULL, "id" integer NOT NULL PRIMARY KEY)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_settings_02d738b3" ON "desktop_settings" ("collect_usage");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_settings" ("tours_and_tutorials" bool NOT NULL, "id" integer PRIMARY KEY, "collect_usage" bool NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_settings" ("collect_usage", "id", "tours_and_tutorials") SELECT "collect_usage", "id", 'True' as "tours_and_tutorials" FROM "desktop_settings";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_settings";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_settings" RENAME TO "desktop_settings";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_settings_02d738b3" ON "desktop_settings"("collect_usage");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_document" ("description" text NOT NULL, "extra" text NOT NULL, "object_id" integer unsigned NOT NULL, "last_modified" datetime NOT NULL, "content_type_id" integer NOT NULL, "version" smallint NOT NULL, "owner_id" integer NOT NULL, "id" integer NOT NULL PRIMARY KEY, "name" text NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_documentpermission" ("perms" text NOT NULL, "doc_id" integer NOT NULL, "id" integer NOT NULL PRIMARY KEY)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "documentpermission_users" ("id" integer NOT NULL PRIMARY KEY, "documentpermission_id" integer NOT NULL, "user_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "documentpermission_users_documentpermission_id__user_id" ON "documentpermission_users"("documentpermission_id", "user_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "documentpermission_groups" ("id" integer NOT NULL PRIMARY KEY, "documentpermission_id" integer NOT NULL, "group_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "documentpermission_groups_documentpermission_id__group_id" ON "documentpermission_groups"("documentpermission_id", "group_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_documenttag" ("owner_id" integer NOT NULL, "tag" varchar(50) NOT NULL, "id" integer NOT NULL PRIMARY KEY)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_document_tags" ("id" integer NOT NULL PRIMARY KEY, "document_id" integer NOT NULL, "documenttag_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_document_tags_document_id__documenttag_id" ON "desktop_document_tags"("document_id", "documenttag_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing oozie
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 262, in sync
+    from oozie.models import Workflow, Coordinator, Bundle
+ImportError: No module named oozie.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing beeswax
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 285, in sync
+    from beeswax.models import SavedQuery
+ImportError: No module named beeswax.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing pig
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 296, in sync
+    from pig.models import PigScript
+ImportError: No module named pig.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing search
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 305, in sync
+    from search.models import Collection
+ImportError: No module named search.models
+[12/Dec/2018 22:44:20 -0800] models       ERROR    error syncing Document2
+Traceback (most recent call last):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/desktop/core/src/desktop/models.py", line 326, in sync
+    for job in find_jobs_with_no_doc(Document2):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 96, in __iter__
+    self._fetch_all()
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 857, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/query.py", line 220, in iterator
+    for row in compiler.results_iter():
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 713, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/XLS_PlatForm/hue-release-3.9.0/build/env/lib/python2.7/site-packages/Django-1.6.10-py2.7.egg/django/db/backends/sqlite3/base.py", line 452, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: desktop_document2
+[12/Dec/2018 22:44:20 -0800] models       INFO     Looking for documents that have no object
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_5ccb38e5" ON "desktop_document" ("last_modified");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_37ef4eb4" ON "desktop_document" ("content_type_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_cb902d83" ON "desktop_document" ("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documentpermission_fbbb6049" ON "desktop_documentpermission" ("doc_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "documentpermission_users_35c59db1" ON "documentpermission_users" ("documentpermission_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "documentpermission_users_6340c63c" ON "documentpermission_users" ("user_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "documentpermission_groups_35c59db1" ON "documentpermission_groups" ("documentpermission_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "documentpermission_groups_5f412f9a" ON "documentpermission_groups" ("group_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documenttag_cb902d83" ON "desktop_documenttag" ("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documenttag_5659cca2" ON "desktop_documenttag" ("tag");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_tags_b7398729" ON "desktop_document_tags" ("document_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_tags_21e9f328" ON "desktop_document_tags" ("documenttag_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_document" ("content_type_id" integer NOT NULL, "extra" text NOT NULL, "object_id" integer unsigned NOT NULL, "name" varchar(255) NULL, "version" smallint NOT NULL, "last_modified" datetime NOT NULL, "owner_id" integer NOT NULL, "id" integer PRIMARY KEY, "description" text NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_document" ("description", "extra", "object_id", "last_modified", "content_type_id", "version", "owner_id", "id", "name") SELECT "description", "extra", "object_id", "last_modified", "content_type_id", "version", "owner_id", "id", "name" FROM "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_document" RENAME TO "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_cb902d83" ON "desktop_document"("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_37ef4eb4" ON "desktop_document"("content_type_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_5ccb38e5" ON "desktop_document"("last_modified");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_document2" ("id" integer NOT NULL PRIMARY KEY, "owner_id" integer NOT NULL, "name" varchar(255) NOT NULL, "description" text NOT NULL, "uuid" varchar(32) NOT NULL, "type" varchar(32) NOT NULL, "data" text NOT NULL, "extra" text NOT NULL, "last_modified" datetime NOT NULL, "version" smallint NOT NULL, "is_history" bool NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_document2_tags" ("id" integer NOT NULL PRIMARY KEY, "from_document2_id" integer NOT NULL, "to_document2_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_document2_tags_from_document2_id__to_document2_id" ON "desktop_document2_tags"("from_document2_id", "to_document2_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "desktop_document2_dependencies" ("id" integer NOT NULL PRIMARY KEY, "from_document2_id" integer NOT NULL, "to_document2_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_document2_dependencies_from_document2_id__to_document2_id" ON "desktop_document2_dependencies"("from_document2_id", "to_document2_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "UPDATE "desktop_userpreferences" SET "key"=%s WHERE "key" IS NULL" with params "[u'']"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_userpreferences" ("key" varchar(20) NOT NULL, "user_id" integer NOT NULL, "id" integer PRIMARY KEY, "value" text NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_userpreferences" ("value", "id", "key", "user_id") SELECT "value", "id", "key", "user_id" FROM "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_userpreferences" RENAME TO "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_userpreferences_6340c63c" ON "desktop_userpreferences"("user_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "UPDATE "desktop_userpreferences" SET "value"=%s WHERE "value" IS NULL" with params "[u'']"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_userpreferences" ("value" text NOT NULL, "user_id" integer NOT NULL, "id" integer PRIMARY KEY, "key" varchar(20) NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_userpreferences" ("key", "user_id", "id", "value") SELECT "key", "user_id", "id", "value" FROM "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_userpreferences" RENAME TO "desktop_userpreferences";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_userpreferences_6340c63c" ON "desktop_userpreferences"("user_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_documentpermission" ("perms" text NOT NULL, "doc_id" integer NOT NULL, "id" integer PRIMARY KEY)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_documentpermission" ("perms", "doc_id", "id") SELECT "perms", "doc_id", "id" FROM "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_documentpermission" RENAME TO "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documentpermission_fbbb6049" ON "desktop_documentpermission"("doc_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "UPDATE "desktop_documenttag" SET "tag"=%s WHERE "tag" IS NULL" with params "[u'']"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_documenttag" ("tag" varchar(50) NOT NULL, "id" integer PRIMARY KEY, "owner_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_documenttag" ("owner_id", "tag", "id") SELECT "owner_id", "tag", "id" FROM "desktop_documenttag";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_documenttag";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_documenttag" RENAME TO "desktop_documenttag";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documenttag_5659cca2" ON "desktop_documenttag"("tag");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documenttag_cb902d83" ON "desktop_documenttag"("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_document" ("name" varchar(255), "extra" text NOT NULL, "description" text NOT NULL, "object_id" integer unsigned NOT NULL, "version" smallint NOT NULL, "last_modified" datetime NOT NULL, "owner_id" integer NOT NULL, "id" integer PRIMARY KEY, "content_type_id" integer NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_document" ("content_type_id", "extra", "object_id", "name", "version", "last_modified", "owner_id", "id", "description") SELECT "content_type_id", "extra", "object_id", "name", "version", "last_modified", "owner_id", "id", "description" FROM "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_document" RENAME TO "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_5ccb38e5" ON "desktop_document"("last_modified");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_37ef4eb4" ON "desktop_document"("content_type_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_cb902d83" ON "desktop_document"("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_document" ("description" text NOT NULL, "extra" text NOT NULL, "object_id" integer unsigned NOT NULL, "content_type_id" integer NOT NULL, "version" smallint NOT NULL, "last_modified" datetime NOT NULL, "owner_id" integer NOT NULL, "id" integer PRIMARY KEY, "name" varchar(255) NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_document" ("name", "extra", "description", "object_id", "version", "last_modified", "owner_id", "id", "content_type_id") SELECT "name", "extra", "description", "object_id", "version", "last_modified", "owner_id", "id", "content_type_id" FROM "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_document" RENAME TO "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_cb902d83" ON "desktop_document"("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_37ef4eb4" ON "desktop_document"("content_type_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_5ccb38e5" ON "desktop_document"("last_modified");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_document" ("content_type_id" integer NOT NULL, "extra" text NOT NULL, "object_id" integer unsigned NOT NULL, "name" varchar(255) NOT NULL, "version" smallint NOT NULL, "last_modified" datetime NOT NULL, "owner_id" integer NOT NULL, "id" integer PRIMARY KEY, "description" text NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_document" ("description", "extra", "object_id", "content_type_id", "version", "last_modified", "owner_id", "id", "name") SELECT "description", "extra", "object_id", "content_type_id", "version", "last_modified", "owner_id", "id", "name" FROM "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_document" RENAME TO "desktop_document";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_5ccb38e5" ON "desktop_document"("last_modified");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_37ef4eb4" ON "desktop_document"("content_type_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_document_cb902d83" ON "desktop_document"("owner_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_document2" ("uuid" varchar(36) NOT NULL, "extra" text NOT NULL, "data" text NOT NULL, "name" varchar(255) NOT NULL, "last_modified" datetime NOT NULL, "version" smallint NOT NULL, "is_history" bool NOT NULL, "owner_id" integer NOT NULL, "type" varchar(32) NOT NULL, "id" integer PRIMARY KEY, "description" text NOT NULL)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_document2" ("id", "owner_id", "name", "description", "uuid", "type", "data", "extra", "last_modified", "version", "is_history") SELECT "id", "owner_id", "name", "description", "uuid", "type", "data", "extra", "last_modified", "version", "is_history" FROM "desktop_document2";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_document2";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_document2" RENAME TO "desktop_document2";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE TABLE "_south_new_desktop_documentpermission" ("perms" varchar(10) NOT NULL, "doc_id" integer NOT NULL, "id" integer PRIMARY KEY)" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "INSERT INTO "_south_new_desktop_documentpermission" ("perms", "doc_id", "id") SELECT "perms", "doc_id", "id" FROM "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "DROP TABLE "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "ALTER TABLE "_south_new_desktop_documentpermission" RENAME TO "desktop_documentpermission";" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE INDEX "desktop_documentpermission_fbbb6049" ON "desktop_documentpermission"("doc_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_documenttag_owner_id__tag" ON "desktop_documenttag"("owner_id", "tag");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_document_content_type_id__object_id" ON "desktop_document"("content_type_id", "object_id");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_documentpermission_doc_id__perms" ON "desktop_documentpermission"("doc_id", "perms");" with params "[]"
+[12/Dec/2018 22:44:20 -0800] generic      DEBUG    execute "CREATE UNIQUE INDEX "desktop_document2_uuid__version__is_history" ON "desktop_document2"("uuid", "version", "is_history");" with params "[]"

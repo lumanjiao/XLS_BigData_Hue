@@ -1,0 +1,14 @@
+README.txt
+setup.cfg
+setup.py
+BabelDjango.egg-info/PKG-INFO
+BabelDjango.egg-info/SOURCES.txt
+BabelDjango.egg-info/dependency_links.txt
+BabelDjango.egg-info/entry_points.txt
+BabelDjango.egg-info/requires.txt
+BabelDjango.egg-info/top_level.txt
+babeldjango/__init__.py
+babeldjango/extract.py
+babeldjango/middleware.py
+babeldjango/templatetags/__init__.py
+babeldjango/templatetags/babel.py
